@@ -1,0 +1,14 @@
+$primary: brown;  /* changes the default color to brown*/
+$secondary: rgb(126, 126, 126);  /* changes the default color to custom color*/
+
+@import"../node_modules/bootstrap/scss/functions"; /*call to acces the variables*/
+@import"../node_modules/bootstrap/scss/variables"; /*call to acces the varaible theme-colors*/
+
+$custom-theme-colors:(
+    "maincolor": red,
+    "other": purple, 
+);
+
+$theme-colors:map-merge($custom-theme-colors, $theme-colors );
+
+@import"../node_modules/bootstrap/scss/bootstrap.scss";
